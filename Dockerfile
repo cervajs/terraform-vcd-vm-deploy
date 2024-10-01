@@ -1,6 +1,6 @@
 FROM rockylinux/rockylinux:9.4
 
-ENV container docker
+ENV container=docker
 ENV TZ=Europe/Prague
 
 # see https://hub.docker.com/_/rockylinux

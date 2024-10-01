@@ -1,3 +1,8 @@
+# howto work in docker
+- docker build -t someone/somename:1.0 . 
+- docker run -ti -v $(pwd):/workplace someone/somename:1.0 /bin/bash
+
+
 # Howto
 
 - mv terraform.tfvars.sample terraform.tfvars  # and fill in
