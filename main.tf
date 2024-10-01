@@ -36,13 +36,14 @@ resource "vcd_vapp_vm" "my_vm" {
   network  {
     type = "org"
     name = var.network_name
-    ip_allocation_mode = "POOL" 
+    ip_allocation_mode = "POOL" # MANUAL for static ip 
     is_primary         = true
   }
 
 
   guest_properties = {
-    "meta-data" = "${base64encode(file("${path.module}/cloud-init/meta-data.yml"))}",
+    #https://cloudinit.readthedocs.io/en/latest/reference/network-config.html
+    "network-config" = "${base64encode(file("${path.module}/cloud-init/network-config.yml"))}",
     "user-data" = "${base64encode(file("${path.module}/cloud-init/user-data.yml"))}"
   }
 }
