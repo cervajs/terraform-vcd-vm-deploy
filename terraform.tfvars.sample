@@ -1,0 +1,13 @@
+vcd_user       = ""
+vcd_password   = ""
+vcd_org        = ""
+vcd_url        = "https://someapi.vcloud_provider_service.com/api"
+vcd_vdc        = ""
+vapp_name      = "test_vapp"
+vm_name        = "testvm"
+catalog_name   = "some_catalog"
+template_name  = "some_template"
+vm_memory      = 2048
+vm_cpus        = 2
+network_name   = "some_network"
+vm_ip          = "10.10.10.10"

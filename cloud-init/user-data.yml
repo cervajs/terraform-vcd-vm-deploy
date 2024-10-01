@@ -1,0 +1,18 @@
+#cloud-config
+hostname: company
+fqdn: company.example.com
+users:
+  - name: user1
+    shell: /bin/bash
+    ssh-authorized-keys:
+      - ssh-rsa some_ssh_key 
+
+chpasswd:
+  list: |
+    root:some_secret_secure_password
+  expire: False
+
+ssh_pwauth: True
+
+runcmd:
+  - echo "Deployed"
